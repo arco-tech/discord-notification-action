@@ -3,12 +3,6 @@ interface RequestOptions {
   headers?: {[name: string]: string};
 }
 
-interface MockResponse {
-  method: string;
-  url: string;
-  options: RequestOptions;
-}
-
 export async function request(
   method: string,
   url: string,
