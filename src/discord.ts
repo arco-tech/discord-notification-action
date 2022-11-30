@@ -1,4 +1,3 @@
-import https from "https";
 import {request} from "./request";
 
 interface WebhookOptions {
@@ -29,7 +28,7 @@ export async function webhook(
       return JSON.parse(data);
     } catch (error) {
       return {
-        error: error.message,
+        error: (error as Error).message,
         data: data,
       };
     }
